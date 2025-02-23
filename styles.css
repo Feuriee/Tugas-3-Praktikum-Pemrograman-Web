@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://w.wallhaven.cc/full/l8/wallhaven-l85oeq.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.todo-app {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 
+                0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #002765;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin: 20px 0;
+    height: 50px;
+    align-items: center;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background: #000080;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.row button:hover {
+    background: #51abf4;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    gap: 10px;
+    min-height: 50px;
+}
+
+ul li::before {
+    display: none; 
+}
+
+/* Styling untuk checkbox */
+.task-checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #000080;
+}
+
+/* Memastikan teks tetap dalam satu baris */
+.task-text {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Efek teks dicoret ketika checkbox dicentang */
+.checked .task-text {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Styling tombol hapus */
+.delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6861/6861362.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efek hover lebih smooth dan ke depan */
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+.swal2-popup {
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.custom-swal {
+    background: url('https://i.pinimg.com/736x/02/da/d3/02dad3d98d356a33464bde33ee9d9f0c.jpg') no-repeat center center;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
